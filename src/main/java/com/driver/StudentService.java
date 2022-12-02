@@ -7,44 +7,47 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class StudentService {
-
-    @Autowired
-    StudentRepository studentRepository;
-
     public void addStudent(Student student){
-        studentRepository.saveStudent(student);
+
     }
 
     public void addTeacher(Teacher teacher){
-        studentRepository.saveTeacher(teacher);
+
     }
 
     public void createStudentTeacherPair(String student, String teacher){
-        studentRepository.saveStudentTeacherPair(student, teacher);
+
     }
 
     public Student findStudent(String studentName){
-        return studentRepository.findStudent(studentName);
+        Student student1 = null; //find the student based on given parameter
+
+        return student1;
     }
 
     public Teacher findTeacher(String teacherName){
-        return studentRepository.findTeacher(teacherName);
+        Teacher teacher1 = null; //find the teacher based on given parameter
+
+        return teacher1;
     }
 
     public List<String> findStudentsFromTeacher(String teacher){
-        System.out.println(teacher);
-        return studentRepository.findStudentsFromTeacher(teacher);
+        List<String> studentList = null; //find student list based on given parameter
+
+        return studentList;
     }
 
     public List<String> findAllStudents(){
-        return studentRepository.findAllStudents();
+        List<String> studentList = null; //find student list based on given parameter
+
+        return studentList;
     }
 
     public void deleteTeacher(String teacher){
-        studentRepository.deleteTeacher(teacher);
+
     }
 
     public void deleteAllTeachers(){
-        studentRepository.deleteAllTeachers();
+
     }
 }
